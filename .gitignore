@@ -3,6 +3,12 @@
 
 !.gitignore
 
+!ghostty/
+!hypr/
+!kitty/
+!rofi/
+!waybar/
+
 !ghostty/**
 !hypr/**
 !kitty/**
