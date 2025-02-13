@@ -9,9 +9,11 @@
 !kitty/
 !rofi/
 !waybar/
+!nvim/
 
 !ghostty/**
 !hypr/**
 !kitty/**
 !rofi/**
 !waybar/**
+!nvim/**
