@@ -2,9 +2,6 @@
 
 The dotfiles to my main PC build.
 
-OS: Arch Linux
-WM: Hyprland
-
 
 ### PC Specs
 ```
