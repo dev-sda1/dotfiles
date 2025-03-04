@@ -5,9 +5,9 @@
     // Archived modules
     // "custom/gpu", "bluetooth",  "custom/weather", "temperature", "sway/window"
     // Choose the order of the modules
-    "modules-left": ["custom/power", "hyprland/workspaces", "clock", "custom/pacman", "idle_inhibitor", "custom/media"],
-    "modules-center": ["hyprland/window"],
-    "modules-right": [ "cpu", "temperature", "pulseaudio", "bluetooth", "network", "tray"],
+    "modules-left": ["custom/power", "hyprland/workspaces", "hyprland/window", "custom/media"],
+    "modules-center": ["clock"],
+    "modules-right": [ "custom/pacman", "cpu", "temperature", "pulseaudio", "bluetooth", "network", "tray"],
     // Modules configuration
     "hyprland/workspaces": {
         "disable-scroll": true,
@@ -24,8 +24,8 @@
         }
     },
     "hyprland/window": {
-        "format": "{}",
-        "max-length": 50, 
+        "format": "{initialTitle}",
+        "max-length": 50,
         "tooltip": false
     },
     "bluetooth": {
@@ -38,23 +38,14 @@
         },
         "on-click": "blueberry"
     },    
-    "idle_inhibitor": {
-        "format": "{icon}",
-        "format-icons": {
-            "activated": "",
-            "deactivated": ""
-        },
-        "tooltip": "true"
-    },
     "tray": {
         //"icon-size": 11,
         "spacing": 5
     },
     "clock": {
-        "format": "  {:%H:%M   %e %b}",
+        "format": "  {:%I:%M %p   %a, %b %e}",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "today-format": "<b>{}</b>",
-        "on-click": "gnome-calendar"
+        "interval": 60
     },
     "cpu": {
         "interval": "1",      
@@ -122,7 +113,7 @@
         "return-type": "json",
         "max-length": 40,
         "format-icons": {
-            "default": "🎜"
+            "default": "🎜 "
         },
         "escape": true,
         "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder

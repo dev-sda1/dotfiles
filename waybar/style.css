@@ -1,27 +1,3 @@
-
-@keyframes blink-warning {
-    70% {
-        color: @light;
-    }
-
-    to {
-        color: @light;
-        background-color: @warning;
-    }
-}
-
-@keyframes blink-critical {
-    70% {
-      color: @light;
-    }
-
-    to {
-        color: @light;
-        background-color: @critical;
-    }
-}
-
-
 /* -----------------------------------------------------------------------------
  * Styles
  * -------------------------------------------------------------------------- */
@@ -30,15 +6,10 @@
 
 /* Nord */
 @define-color bg #2E3440;
-/*@define-color bg #353C4A;*/
-@define-color light #D8DEE9;
-/*@define-color dark @nord_dark_font;*/
+@define-color light #FFF;
 @define-color warning #ebcb8b;
 @define-color critical #BF616A;
 @define-color mode #434C5E;
-/*@define-color workspaces @bg;*/
-/*@define-color workspaces @nord_dark_font;*/
-/*@define-color workspacesfocused #434C5E;*/
 @define-color workspacesfocused #4C566A;
 @define-color tray @workspacesfocused;
 @define-color sound #EBCB8B;
@@ -60,18 +31,17 @@
 /* Reset all styles */
 * {
     border: none;
-    border-radius: 3px;
+    border-radius: 0px;
     min-height: 0;
-    margin: 0.2em 0.3em 0.2em 0.3em;
+    margin: 0.15em 0.3em 0.15em 0.3em;
+    font-family: "Hack Nerd Font";
+    font-size: 13px;
 }
 
 /* The whole bar */
 #waybar {
-    background: @bg;
-    color: @light;
-    font-family: "Cantarell", "Font Awesome 5 Pro";
-    font-size: 12px;
-    font-weight: bold;
+    background: rgba(0,0,0,0.6);
+    color: #FFF;
 }
 
 /* Each module */
@@ -86,6 +56,7 @@
 #temperature,
 #custom-alsa,
 #custom-pacman,
+#custom-media,
 #custom-weather,
 #custom-gpu,
 #tray,
@@ -109,8 +80,7 @@
 /* Each critical module */
 #memory.critical,
 #cpu.critical,
-#temperature.critical,
-#battery.critical {
+#temperature.critical {
     color: @critical;
 }
 
@@ -176,47 +146,33 @@
 }
 
 #window {
-    margin-right: 40px;
-    margin-left: 40px;
+    margin-right: 15px;
+    margin-left: 10px;
     font-weight: normal;
 }
+
 #bluetooth {
     background: @nord_bg_blue;
     font-size: 1.2em;
     font-weight: bold;
     padding: 0 0.6em;
 }
-#custom-gpu {
-    background: @nord_bg;
-    font-weight: bold;
-    padding: 0 0.6em;
-}
-#custom-weather {
-    background: @mode;
-    font-weight: bold;
-    padding: 0 0.6em;
-}
+
 #custom-pacman {
-    background: @nord_light;
-    color: @nord_dark_font;
+    background: none;
+    color: @light;
     font-weight: bold;
     padding: 0 0.6em;
 }
-#custom-scratchpad-indicator {
-    background: @nord_light;
-    color: @nord_dark_font;
-    font-weight: bold;
-    padding: 0 0.6em;
+
+#custom-media {
+    margin-left: 5px;
 }
-#idle_inhibitor {
-    background: @mode;
-    /*font-size: 1.6em;*/
-    font-weight: bold;
-    padding: 0 0.6em;
-}
+
 #custom-power {
     padding: 0 0.6em
 }
+
 #custom-alsa {
     background: @sound;
 }
@@ -233,6 +189,7 @@
     background: @nord_bg;
     color: #D8DEE9;
 }
+
 #cpu.critical {
     color: @nord_dark_font;
 }
@@ -268,8 +225,8 @@
 }
 
 #clock {
-    background: @nord_bg_blue;
-    color: #D8DEE9;
+    background: none;
+    color: @light;
 }
 #clock.date {
     background: @date;
