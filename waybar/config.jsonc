@@ -14,13 +14,11 @@
         "all-outputs": true,
         "format": "{icon}",
         "format-icons": {
-            "1": "<span color=\"#D8DEE9\">1</span>",
-            "2": "<span color=\"#88C0D0\">2</span>",
-            "3": "<span color=\"#A3BE8C\">3</span>",
-            "4": "<span color=\"#D8DEE9\">4</span>",
-            "urgent": "",
-            "focused": "",
-            "default": ""
+            "1": "1",
+            "2": "2",
+            "3": "3",
+            "4": "4",
+            "urgent": ""
         }
     },
     "hyprland/window": {
@@ -49,8 +47,8 @@
     },
     "cpu": {
         "interval": "1",      
-        "format": "  {max_frequency}GHz <span color=\"darkgray\">| {usage}%</span>",
-        "max-length": 13,
+        "format": "  {max_frequency}GHz | {usage}%",
+        "max-length": 18,
         "min-length": 13,
         "on-click": "kitty -e htop --sort-key PERCENT_CPU",
         "tooltip": false
@@ -58,7 +56,7 @@
     "network": {
         // "interface": "wlan0", // (Optional) To force the use of this interface,
         "format-wifi": "  {essid}",
-        "format-ethernet": "{ifname}: {ipaddr}/{cidr} ",
+        "format-ethernet": "{ifname}: {ipaddr}/{cidr}",
         "format-linked": "{ifname} (No IP) ",
         "format-disconnected": "",
         "format-alt": "{ifname}: {ipaddr}/{cidr}",
@@ -88,16 +86,6 @@
         "on-click": "pavucontrol",
         "on-click-right": "pactl set-source-mute @DEFAULT_SOURCE@ toggle"
     },
-    // "wireplumber": {
-    //     "scroll-step": 3, // %, can be a float
-    //     "format": "{volume}%",
-    //     "format-muted": " {format_source}",
-    //     //"format-source": "{volume}% ",
-    //     //"format-source-muted": "",
-    //     // "format-source": "",
-    //     // "format-source-muted": "",
-    //     "on-click": "pavucontrol"
-    // },
     "custom/pacman": {
         "format": "<big></big>  {}",
         "interval": 3600,                     // every hour
@@ -105,7 +93,7 @@
         "exec-if": "exit 0",                  // always run; consider advanced run conditions
         "on-click": "kitty -e 'yay'; pkill -SIGRTMIN+8 waybar", // update system
         "signal": 8,
-        "max-length": 5,
+        "max-length": 7,
         "min-length": 3
     },
     "custom/media": {
