@@ -257,7 +257,7 @@
 
 #pulseaudio.muted {
     background: #BF616A;
-    color: #BF616A;
+    color: white;
     /* No styles */
 }
 #pulseaudio.source-muted {
