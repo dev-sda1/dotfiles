@@ -1,6 +1,6 @@
 ## Dotfiles
 
-The dotfiles to my main PC build.
+The dotfiles to my main PC build (at least when I was on arch)
 
 
 ### PC Specs
