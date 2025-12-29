@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 set -e
 
+## This acts as a one-stop setup file for dotfiles, and certain software.
+## Verified working with Fedora 43.
+
 if [ $(id -u) -ne 0 ]
     then echo "This should be run as sudo."
     exit -1
@@ -41,6 +44,14 @@ dnf install waybar -y
 dnf install gammastep -y
 dnf install slurp -y
 dnf install jetbrains-mono-fonts-all -y
+
+# Other packages
+dnf install steam -y
+dnf install telegram-desktop -y
+
+mkdir -p /home/${SUDO_USER}/.local/bin/
+wget https://raw.githubusercontent.com/jluttine/rofi-power-menu/refs/heads/master/rofi-power-menu -O /home/${SUDO_USER}/.local/bin/rofi-power-menu
+chmod +x /home/${SUDO_USER}/.local/bin/rofi-power-menu
 
 echo -e "\n Copying config files"
 
