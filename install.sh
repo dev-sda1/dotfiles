@@ -44,6 +44,7 @@ dnf install waybar -y
 dnf install gammastep -y
 dnf install slurp -y
 dnf install jetbrains-mono-fonts-all -y
+dnf install curl -y
 
 # Other packages
 dnf install steam -y
@@ -52,6 +53,11 @@ dnf install telegram-desktop -y
 mkdir -p /home/${SUDO_USER}/.local/bin/
 wget https://raw.githubusercontent.com/jluttine/rofi-power-menu/refs/heads/master/rofi-power-menu -O /home/${SUDO_USER}/.local/bin/rofi-power-menu
 chmod +x /home/${SUDO_USER}/.local/bin/rofi-power-menu
+
+echo -e "\nNow configuring ZSH.."
+dnf install -y zsh
+chsh $SUDO_USER -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 echo -e "\n Copying config files"
 
