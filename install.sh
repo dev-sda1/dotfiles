@@ -57,7 +57,7 @@ chmod +x /home/${SUDO_USER}/.local/bin/rofi-power-menu
 echo -e "\nNow configuring ZSH.."
 dnf install -y zsh
 chsh $SUDO_USER -s $(which zsh)
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended || echo "oh-my-zsh already installed.."
 
 echo -e "\n Copying config files"
 
