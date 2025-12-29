@@ -32,7 +32,7 @@ sudo dnf install pip3 -y
 sudo dnf install pavucontrol -y
 sudo dnf install code -y
 sudo dnf install hyprland -y
-sudo dnf install hyprland-qtutils -y
+sudo dnf install hyprland-qt-support hyprland-qtutils -y
 sudo dnf install hyprpaper -y
 sudo dnf install hyprlock -y
 sudo dnf install ghostty -y
