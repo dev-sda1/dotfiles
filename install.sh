@@ -3,6 +3,8 @@ set -e
 
 ## This acts as a one-stop setup file for dotfiles, and certain software.
 ## Verified working with Fedora 43.
+##
+## TODO: Waydroid install and Configure for Apple Music Support.
 
 ## Full system update first..
 sudo dnf update -y
@@ -21,13 +23,13 @@ sudo dnf copr enable solopasha/hyprland -y
 sudo dnf copr enable scottames/ghostty -y
 
 ## VSCode keys
-rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
+sudo rpm --import https://packages.microsoft.com/keys/microsoft.asc && echo -e "[code]\nname=Visual Studio Code\nbaseurl=https://packages.microsoft.com/yumrepos/vscode\nenabled=1\nautorefresh=1\ntype=rpm-md\ngpgcheck=1\ngpgkey=https://packages.microsoft.com/keys/microsoft.asc" | sudo tee /etc/yum.repos.d/vscode.repo > /dev/null
 
 # Packages
 
 sudo dnf install python3 -y
 sudo dnf install pip3 -y
-sudo dnf install -y pavucontrol
+sudo dnf install pavucontrol -y
 sudo dnf install code -y
 sudo dnf install hyprland -y
 sudo dnf install hyprland-qtutils -y
