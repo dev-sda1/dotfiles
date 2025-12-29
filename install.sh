@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 set -e
 
 if [ $(id -u) -ne 0 ]
@@ -44,11 +44,11 @@ dnf install jetbrains-mono-fonts-all -y
 
 echo -e "\n Copying config files"
 
-mkdir -p ~/${USER}/.config
-cp -r ${PWD}/ghostty /home/${USER}/.config/
-cp -r ${PWD}/hypr /home/${USER}/.config/
-cp -r ${PWD}/nvim /home/${USER}/.config/
-cp -r ${PWD}/rofi /home/${USER}/.config/
-cp -r ${PWD}/waybar /home/${USER}/.config/
+mkdir -p /home/${SUDO_USER}/.config
+cp -r ${PWD}/ghostty /home/${SUDO_USER}/.config/
+cp -r ${PWD}/hypr /home/${SUDO_USER}/.config/
+cp -r ${PWD}/nvim /home/${SUDO_USER}/.config/
+cp -r ${PWD}/rofi /home/${SUDO_USER}/.config/
+cp -r ${PWD}/waybar /home/${SUDO_USER}/.config/
 
 echo -e "\n Fully complete! Restart system to finish."
