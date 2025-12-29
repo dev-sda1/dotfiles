@@ -45,10 +45,10 @@ dnf install jetbrains-mono-fonts-all -y
 echo -e "\n Copying config files"
 
 mkdir -p ~/${USER}/.config
-cp -r ${PWD}/ghostty ~/${USER}/.config/
-cp -r ${PWD}/hypr ~/${USER}/.config/
-cp -r ${PWD}/nvim ~/${USER}/.config/
-cp -r ${PWD}/rofi ~/${USER}/.config/
-cp -r ${PWD}/waybar ~/${USER}/.config/
+cp -r ${PWD}/ghostty /home/${USER}/.config/
+cp -r ${PWD}/hypr /home/${USER}/.config/
+cp -r ${PWD}/nvim /home/${USER}/.config/
+cp -r ${PWD}/rofi /home/${USER}/.config/
+cp -r ${PWD}/waybar /home/${USER}/.config/
 
 echo -e "\n Fully complete! Restart system to finish."
