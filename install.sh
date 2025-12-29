@@ -15,7 +15,7 @@ dnf config-manager setopt fedora-cisco-openh264.enabled=1
 dnf install akmod-nvidia -y
 dnf install xorg-x11-drv-nvidia-cuda -y
 
-dnf group install "Development Tools" -y
+dnf group install development-tools -y
 dnf install git -y
 
 ## Enabling hyprland COPR repository
